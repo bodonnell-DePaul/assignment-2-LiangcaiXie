@@ -8,7 +8,7 @@ describe('TodoList Component', () => {
 
   test('renders the title', () => {
     render(<TodoList />);
-    const titleElement = screen.getByText(/Assignment 2: ToDo List/i);
+    const titleElement = screen.getByText(/Assignment 2: Liangcai-Xie ToDo List/i);
     expect(titleElement).toBeInTheDocument();
   });
 
