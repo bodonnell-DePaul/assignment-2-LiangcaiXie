@@ -10,7 +10,7 @@ function ViewPort() {
 
   return (
     <Container>
-      <Row className="title mb-4">Assignment2 Liangcai's ToDoList</Row>
+      <Row className="title mb-4">Assignment2: Liangcai-Xie ToDo List</Row>
       <Row>
         <Col sm={4}>
           <ToDoCreate todos={todos} setTodos={setTodos} />
