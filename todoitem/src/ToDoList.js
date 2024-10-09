@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ListGroup, Tabs, Tab, Button, Form, Row, Col } from 'react-bootstrap';
+import { ListGroup, Tabs, Tab, Form, Row, Col } from 'react-bootstrap';
 import { parseISO } from 'date-fns';
 
 function ToDoList({ todos, setTodos }) {
@@ -43,7 +43,7 @@ function ToDoList({ todos, setTodos }) {
     } else {
         return 'danger';
     }
-};
+  };
 
   return (
     <Row>
@@ -72,17 +72,21 @@ function ToDoList({ todos, setTodos }) {
                   suppressContentEditableWarning={true}
                   className="border p-1"
                   style={{ minHeight: '100px' }}
+                  onBlur={handleSave}
                 >
                   {description}
                 </div>
                 <div className="p-1">
                   <Form.Group controlId="dueDate">
-                    <Form.Control style={{ width: '30%' }} type="date" value={dueDate}  onChange={(e) => setDueDate(e.target.value)}/>
+                    <Form.Control 
+                      style={{ width: '30%' }} 
+                      type="date" 
+                      value={dueDate}  
+                      onChange={(e) => setDueDate(e.target.value)}
+                      onBlur={handleSave} // Trigger save on losing focus
+                    />
                   </Form.Group>
                 </div>
-                <Button variant="primary" className="mt-2" onClick={handleSave}>
-                  Save
-                </Button>
               </div>
             </Tab>
           </Tabs>

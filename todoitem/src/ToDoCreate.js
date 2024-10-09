@@ -44,7 +44,7 @@ function ToDoCreate({ todos, setTodos }) {
         <Form.Control type="date" name="dueDate" value={dueDate} onChange={handleChange} required />
       </Form.Group>
 
-      <Button variant="primary" type="submit" cclassName="mt-3 btn-add-todo"> 
+      <Button type="submit" className="w-100 mt-3 btn-add-todo"> 
         Add Todo
       </Button>
     </Form>
